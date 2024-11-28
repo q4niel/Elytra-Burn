@@ -2,7 +2,9 @@
 	"required": true,
 	"package": "q4niel.elytraburn.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [],
+	"mixins": [
+		"FireworkRocketItemMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
 	}
