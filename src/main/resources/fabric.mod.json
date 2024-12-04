@@ -7,7 +7,12 @@
 	"authors": [
 		"q4niel"
 	],
+	"contributors": [
+		"Max Westerlund - Art Assets"
+	],
 	"contact": {
+		"homepage": "https://modrinth.com/mod/elytra-burn",
+		"issues": "https://github.com/q4niel/Elytra-Burn/issues",
 		"sources": "https://github.com/q4niel/Elytra-Burn"
 	},
 	"license": "The Insight License II",
