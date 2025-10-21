@@ -1,39 +1,42 @@
 {
 	"schemaVersion": 1,
-	"id": "elytraburn",
+	"id": "elytra_burn",
 	"version": "${version}",
 	"name": "Elytra Burn",
 	"description": "Say goodbye to risk-free rocket boosting!",
-	"authors": [
-		"q4niel"
-	],
-	"contributors": [
-		"Max Westerlund - Art Assets"
-	],
+	"authors": ["q4niel"],
+    "contributors": ["MaxWesterlund (Art Assets)"],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/elytra-burn",
-		"issues": "https://github.com/q4niel/Elytra-Burn/issues",
-		"sources": "https://github.com/q4niel/Elytra-Burn"
+		"sources": "https://github.com/q4niel/Elytra-Burn",
+        "issues": "https://github.com/q4niel/Elytra-Burn/issues"
 	},
-	"license": "The Insight License II",
-	"icon": "assets/elytraburn/icon.png",
+	"license": "Elytra Burn License",
+	"icon": "assets/elytra_burn/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"q4niel.elytraburn.ElytraBurn"
+			{
+				"value": "dev.q4niel.ElytraBurn",
+				"adapter": "kotlin"
+			}
 		],
 		"fabric-datagen": [
-			"q4niel.elytraburn.ElytraBurnDataGenerator"
+			{
+				"value": "dev.q4niel.ElytraBurnDataGenerator",
+				"adapter": "kotlin"
+			}
 		]
 	},
 	"mixins": [
-		"elytraburn.mixins.json"
+		"elytra_burn.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21",
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.10",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
 	},
 	"suggests": {
 		"another-mod": "*"
