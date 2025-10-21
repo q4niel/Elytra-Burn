@@ -1,6 +1,7 @@
 package dev.q4niel
 
 import net.fabricmc.api.ModInitializer
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents
 import org.slf4j.LoggerFactory
 
 object ElytraBurn : ModInitializer {
@@ -9,5 +10,9 @@ object ElytraBurn : ModInitializer {
     private val _logger_ = LoggerFactory.getLogger(modID_);
     fun print(string: String): Unit = _logger_.info(string);
 
-	override fun onInitialize() {}
+	override fun onInitialize() {
+        ServerLifecycleEvents.SERVER_STARTED.register { server ->
+            ModConfig.init();
+        }
+    }
 }

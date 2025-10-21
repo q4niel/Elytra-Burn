@@ -1,5 +1,15 @@
 # Elytra Burn
-Say goodbye to risk-free rocket boosting!
+Say goodbye to risk-free rocket boosting!<br>
+Players take damage when using elytra rocket boosts.
+
+## Optional TOML Customization
+### File path: config/elytra_burn.toml
+```toml
+# This (#) is a comment
+
+# Damage dealt by rocket boost (2 points = 1 heart)
+rocket_boost_damage = 8
+```
 
 ## Download
 - [Modrinth](https://modrinth.com/mod/elytra-burn/versions)

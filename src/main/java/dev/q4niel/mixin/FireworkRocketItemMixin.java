@@ -1,5 +1,6 @@
 package dev.q4niel.mixin;
 
+import dev.q4niel.ModConfig;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FireworkRocketItem;
 import net.minecraft.server.world.ServerWorld;
@@ -19,6 +20,11 @@ public class FireworkRocketItemMixin {
     )
     void use(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
         if (world.isClient() || !user.isGliding()) return;
-        user.damage((ServerWorld) world, user.getDamageSources().onFire(), 8);
+
+        user.damage (
+                (ServerWorld)world,
+                user.getDamageSources().onFire(),
+                ModConfig.INSTANCE.get().getRocketBoostDamage()
+        );
     }
 }
